@@ -1,0 +1,151 @@
+*{
+margin: 0;padding: 0;
+box-sizing: border-box;
+font-family: Arial, Helvetica, sans-serif;
+}
+:root{
+--Linear-Gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%);
+--VeryLightGrayish-Blue: hsl(240, 78%, 98%);
+--LightGrayishBlue: hsl(234, 14%, 74%);
+--GrayishBlue: hsl(233, 13%, 49%);
+--DarkGrayishBlue: hsl(232, 13%, 33%);
+}
+a{
+text-decoration: none;
+color: var(--DarkGrayishBlue);
+}
+body{
+width: 100%;
+min-height: 100vh;
+
+}
+.container{
+min-width: 100vw;
+min-height: 100vh;
+background:var(--VeryLightGrayish-Blue) ;
+text-align: center;
+padding-top: 30px;
+}
+.container .project .plan h2{
+color: var(--GrayishBlue);
+font-size: 28px;
+margin-bottom: 20px;
+}
+.plan{
+margin-bottom: 30px;
+}
+.plan .planType{
+font-size: 15px;
+color: var(--LightGrayishBlue);
+margin: 0px 15px;
+}
+.plan .input{
+position: relative;
+padding: 5px 25px;
+border-radius: 20px;
+background-color: var(--GrayishBlue);
+}
+.plan .check{
+position: absolute;
+background-color: #fff;
+padding: 11px;
+border-radius: 50%;
+right: 3px;
+bottom: 3px;
+cursor: pointer;
+transition: .4s;
+}
+.boxs{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction:column;
+}
+.boxs .box{
+width: 250px;
+height: 400px;
+background-color: #fff;
+box-shadow: 0px 0px 10px var(--LightGrayishBlue) ,0px 0px 10px white;
+margin: 8px 0px;
+border-radius: 5px;
+z-index: 1;
+}
+.box p{
+margin: 37px 0px;
+color: var(--DarkGrayishBlue);
+font-weight: 700;
+font-size: 15px;
+}
+.box h3{
+font-size: 40px;
+font-weight: 700;
+color: var(--DarkGrayishBlue);
+}
+.box :nth-child(4) , .box :nth-child(5) , .box :nth-child(6){
+font-weight: 600;
+color: var(--GrayishBlue);
+}
+.box button{
+padding: 7px 11px;
+background:linear-gradient(hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+color: #fff;
+font-weight: 700;
+border: none;
+width: 80%;
+border-radius: 5px;
+cursor: pointer;
+transition: .4s;
+}
+.active{
+background:linear-gradient(hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+}
+.boxs .active p, .boxs .active h3{
+color: #fff;
+}
+.boxs .active button{
+background: var(--VeryLightGrayish-Blue);
+color: var(--DarkGrayishBlue);
+}
+.project .plan .toggleCheck{
+right: 24px;
+}
+.togglePrice1{
+display: none;
+}
+.togglePrice2{
+display: none;
+}.bottomimg{
+display: none;
+}.topimg{
+position: absolute;
+top: -50px;
+right: -170px;  
+}
+
+@media (min-width:800px){
+.boxs{
+flex-direction: row;
+}.boxs .box{
+width: 350px;
+height: 500px;
+margin-bottom: 60px;
+z-index: 1;
+}.container{
+background-image: none;
+position: relative;
+overflow: hidden;
+}
+.bottomimg{
+display: block;
+position: absolute;
+bottom: 40px;
+left: 20px;
+z-index: 0;
+}.topimg{
+position: absolute;
+top: 0;
+right: 0;
+}
+}
+
+
